@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+    <script>
+        var map = {}
+        var ruta = {}
+        var puntos = []
+
+        function geolocalizar() {
+
+            // Geolocaliza y centra el mapa a ese punto
+            map.locate({
+                setView: true
+            })
+
+            // Inicializa el Objeto ruta
+            ruta = L.Routing.control({
+                language: "es",
+                collapsible: true,
+                show: false
+            }).addTo(map)
+
+        }
+
+        // Función que quita la ruta y los puntos (marcadores)
+        function reiniciar() {
+            ruta.remove()
+
+            for (var i = 0; i < puntos.length; i++) {
+                puntos[i].remove()
+            }
+            puntos = []
+
+            geolocalizar()
+        }
+
+        // Función que quita todas las rutas y puntos, menos el primero y último
+        function compactar() {
+            puntos = [puntos[0], puntos[puntos.length]];
+            // Convierte el Array de puntos en un Array de waypoints
+            var waypoints = []
+                for (var i = 0; i < puntos.length; i++) {
+                    waypoints[waypoints.length] = puntos[i].getLatLng()
+                }
+
+                // Actualiza la ruta de puntos/waypoints
+                ruta.setWaypoints(waypoints)
+        }
+
+        $(function () {
+            //$("#reinicia").on('click', reiniciar);
+            $("#ruta_compacta").on('click', compactar);
+            map = L.map('mapid'); // mapid es el id del elemento DIV donde dibujar el mapa
+
+            // Establece el proveedor de mapas (tiles)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+            // función a ejecutar cuando la Geolocalización funciona
+            map.on('locationfound', function (e) {
+                puntos[puntos.length] = L.marker(e.latlng)
+                puntos[puntos.length - 1].addTo(map)
+            })
+
+            // función a ejecutar cuando se hace un click en el mapa
+            map.on('click', function (e) {
+
+                // Crea el marcador y lo guarda, luego lo agrega al mapa
+                puntos[puntos.length] = L.marker(e.latlng)
+                puntos[puntos.length - 1].addTo(map)
+
+                // Convierte el Array de puntos en un Array de waypoints
+                var waypoints = []
+                for (var i = 0; i < puntos.length; i++) {
+                    waypoints[waypoints.length] = puntos[i].getLatLng()
+                }
+
+                // Actualiza la ruta de puntos/waypoints
+                ruta.setWaypoints(waypoints)
+
+            })
+
+            geolocalizar()
+        })
+    </script>
+</head>
+
+<body>
+    <h1>Geolocalización <button id="ruta_compacta">Compactar ruta</button></h1>
+    <div id="mapid"></div>
+</body>
+
+</html>

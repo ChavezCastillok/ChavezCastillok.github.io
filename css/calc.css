@@ -1,0 +1,30 @@
+/* Estilos especificos */
+
+#calculadora {
+    text-align: center;
+}
+
+#num {
+    width: 11rem;
+    height: 2rem;
+}
+
+#calculadora button {
+    width: 2rem;
+    height: 2rem;
+}
+
+#calculadora #sumatorio_de_nn,
+#calculadora #producto_de_nn,
+#calculadora #ToM,
+#calculadora #FromM {
+    width: auto;
+}
+
+.ocultar_btn {
+    display: none;
+}
+
+.mostrar_btn {
+    display: inline;
+}

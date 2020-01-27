@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* CSS Document */
+html,
+body {
+    border: 1px dashed darkslateblue;
+    text-align: justify;
+    font-family: 'Rubik';
+    background-color: slategray;
+    color: darkmagenta;
+    margin: 0px;
+    padding: 0px;
+}
+
+#cabecera {
+    text-align: center;
+    margin-bottom: .4rem;
+    background-color: darkslateblue;
+    box-shadow: darkmagenta 0px 6px 6px;
+}
+
+#titulopp {
+    display: inline-block;
+    max-width: 360px;
+    margin: .4rem;
+    padding: .2rem 1rem;
+
+    border-radius: 30px;
+    border: 2px solid darkslateblue;
+
+    box-shadow: ghostwhite 0px 0px 10px;
+    background: -webkit-linear-gradient(top, darkmagenta, darkslateblue);
+}
+
+#titulopp a {
+    text-decoration: none;
+    color: ghostwhite;
+    text-shadow: black -1px 1px 2px;
+}
+
+#minititle {
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: black -1px 1px 2px;
+    border: 2px solid black;
+
+    border-radius: 30px;
+    box-shadow: black -5px 5px 10px;
+
+    background: -webkit-linear-gradient(top, black, darkmagenta);
+}
+
+#menu ul {
+    display: flex;
+    align-items: stretch;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    flex-grow: 1;
+    border-radius: 8px;
+}
+
+#menu a {
+    display: block;
+    text-decoration: none;
+    margin: .25rem;
+    /* arriba, derecha, abajo, izquierda */
+    margin-bottom: .5rem;
+    padding: .4rem;
+    color: darkmagenta;
+    background-color: ghostwhite;
+}
+
+#menu a:hover {
+    background-color: black;
+    color: deeppink;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#secciones,
+#cuerpo {
+    display: grid;
+}
+
+.tt-set-pp {
+    padding-top: .3rem;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: ghostwhite;
+    background-color: darkslateblue;
+    box-shadow: darkmagenta 0px 6px 6px;
+}
+
+.seccion iframe {
+    min-width: 360px;
+    height: 480px;
+    border: 1px solid darkslateblue;
+}
+
+.seccion {
+    margin: .2rem;
+    padding: .5rem;
+    background-color: rgba(248, 248, 255, 0.1);
+}
+
+.seccion>h1 {
+    color: deeppink;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    font-style: italic;
+}
+
+#adicional h1 {
+    text-align: center;
+    color: deeppink;
+    text-shadow: 1px 1px 1px darkslateblue;
+}
+
+.cambio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cambio section div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: .6rem;
+    border: 1px dashed darkslateblue;
+    width: 190px;
+}
+
+.cambio th{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.cambio input {
+    width: 4rem;
+}
+
+.seccion article {
+    background: ghostwhite;
+    border: 1px solid darkslateblue;
+    margin: .2rem;
+    padding: 1rem;
+    margin-bottom: 15px;
+}
+
+.seccion article {
+    object-fit: scale-down;
+}
+
+#pie {
+    display: grid;
+    background-color: darkslateblue;
+}
+
+.pies {
+    color: ghostwhite;
+    text-align: center;
+}
+
+.enlace {
+    /* que tambien hacen de titulos */
+    color: deeppink;
+    text-decoration: none;
+    font-style: italic;
+    padding: 0 .6rem 0 .6rem;
+}
+
+.enlace:hover {
+    background-color: black;
+    color: deeppink;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1267px) {
+    #cabecera {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: .4rem;
+    }
+
+    #cuerpo {
+        grid-template-columns: auto 275px;
+        grid-template-rows: auto;
+    }
+
+    #pie {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (min-width: 1268px) {
+    #cabecera {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: .4rem;
+    }
+
+    #cuerpo {
+        grid-template-columns: auto 275px;
+        grid-template-rows: auto;
+    }
+
+    #secciones {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+
+    #secciones h1 {
+        grid-column: span 2;
+    }
+
+    #taskcursoaw h1 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    #pie {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media (orientation: portrait) {
+
+    #cuerpo,
+    #secciones {
+        display: block;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu li {
+        margin-bottom: .3rem;
+    }
+
+    #adicional section {
+        flex-direction: column;
+    }
+
+    #pie {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media print {
+    /* por desarrollar */
+}

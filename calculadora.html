@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora CCK</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/calc.css">
+    <style>
+        @media (orientation: landscape) {
+            .seccion {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+            }
+        }
+    </style>
+
+    <script src="js/vue.js"></script>
+    <script src="js/labjs.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/calc-mod5.js"></script>
+</head>
+
+<body>
+    <div id="page">
+        <cabecera></cabecera>
+
+        <main>
+            <!-- Acá va la calc :: Manipulada con javascript -->
+            <section class="seccion">
+                <article id="calculadora">
+                    <h1>Buenos días, bienvenido a la calculadora de Kevin Chavez</h1>
+                    <p><label for="entrada"><input type="text" id="num" placeholder="ingrese un número"></label></p>
+                    <small>Operaciones unitarias</small>
+                    <p>
+                        <button id="x_al_cuadrado">x<sup>2</sup></button>
+                        <button id="inverso_de_x"><sup>1</sup>/<sub>x</sub></button>
+                        <button id="raiz_cuadrada_de_x">&radic;x</button>
+                        <button id="parte_entera_de_x">|x|</button>
+                    </p>
+                    <p>
+                        <button id="2_a_la_n"><sub>2</sub><sup>n</sup></button>
+                        <button id="factorial_de_n">n!</button>
+                    </p>
+                    <small>Operaciones binarias</small>
+                    <p>
+                        <button id="suma">+</button>
+                        <button id="resta">-</button>
+                        <button id="multiplicacion">x</button>
+                        <button id="division">/</button>
+                        <button id="x_a_la_y">x<sup>y</sup></button>
+                    </p>
+                    <p>
+                        <button id="realizar_op">=</button>
+                    </p>
+                    <small>Operaciones n arias</small>
+                    <p>
+                        <button id="sumatorio_de_nn">&sum;x</button>
+                        <button id="producto_de_nn">&Product;x</button>
+                    </p>
+                    <hr>
+                    <p><small>Ver <a href="taskmod4.html" class="enlace">Calculadora CCK anterior</a></small></p>
+                </article>
+                <article>
+                    <h1>Instrucciones de uso</h1>
+                    <h2>Para las operaciones unitarias:</h2>
+                    <ol>
+                        <li>Ingresar un numero</li>
+                        <li>Seleccionar una operación:
+                            <ul>
+                                <li>Elevar al cuadrado (x<sup>2</sup>)</li>
+                                <li>Inverso del número (<sup>1</sup>/<sub>x</sub>)</li>
+                                <li>Raiz cuadrada (&radic;x)</li>
+                                <li>Valor absoluto o parte entera del número (|x|)</li>
+                                <li>Potencia n del número 2 (<sub>2</sub><sup>n</sup>)</li>
+                                <li>Factorial del número n: {n*(n-1)*(n-2)*...*3*2*1} (n!)</li>
+                            </ul>
+                        </li>
+                        <li>Listo, el resultado se mostrará inmediatamente.</li>
+                    </ol>
+
+                    <h2>Para las operaciones binarias:</h2>
+                    <ol>
+                        <li>Ingresar un numero (operando 1)</li>
+                        <li>Seleccionar una operación:
+                            <ul>
+                                <li>Suma (+)</li>
+                                <li>Resta (-)</li>
+                                <li>Multiplicación (x)</li>
+                                <li>División (/)</li>
+                                <li>Potencia (x<sup>y</sup>)</li>
+                            </ul>
+                        </li>
+                        <li>Ingresar otro número (operando 2), sino, se usa el mismo.</li>
+                        <li>Pulsar o hacer click sobre el boton igual (=) para obetener el resultado.</li>
+                    </ol>
+                    <h2>Para las operaciones n arias:</h2>
+                    <ol>
+                        <li>Ingresar los valores separados por coma</li>
+                        <li>Seleccionar una de las operaciones:
+                            <ul>
+                                <li>Sumatorio de n números (&sum;x)</li>
+                                <li>Producto de n números (&Product;x)</li>
+                            </ul>
+                        </li>
+                        <li>Obtienes el resultado.</li>
+                    </ol>
+                    <h3>Notas:</h3>
+                    <ul>
+                        <li>En todos los casos el resultado es mostrado en el cuadro de ingreso.</li>
+                        <li>Los números con parte decimal se separan con punto (.).</li>
+                        <li>Si el resultado en "NaN" es porque se ejecuto una operación no valida.</li>
+                        <li>Si el resultado es "Infinity" es porque el resultado es un número demasido alto o demasiado
+                            bajo.</li>
+                    </ul>
+                    <p></p>
+
+                </article>
+
+            </section>
+
+        </main>
+
+        <pie></pie>
+
+    </div>
+
+</body>
+
+</html>

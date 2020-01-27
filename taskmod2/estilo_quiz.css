@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+section {
+	display:grid;
+	margin-bottom:0.1em;	
+}
+article {
+	font-family: 'Lato', sans-serif;
+}
+article h1 {
+	margin: 1rem 1rem 0rem 1rem;
+	text-transform: uppercase;
+}
+/* MAIN */
+#main {
+	display:grid;
+	grid-gap: 1rem;
+	padding:1rem;
+}
+.bloque {
+	font-family: 'Merriweather', serif;
+	box-shadow: 3px 5px 28px 0px rgba(0,0,0,0.75);
+}
+.bloque img {
+	width:100%;
+	height:auto;
+}
+.bloque .textos {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFF;	
+}
+.textos h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+	margin-top: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #19191B;
+}
+.textos p {
+	font-size:0.8rem;
+}
+.textos a {
+	font-size:0.8rem;
+	color:red;
+	text-decoration:none;
+}
+.textos a:hover {
+	text-decoration: underline;
+}
+/* NAV */
+nav {
+	margin-bottom:0.1em;
+	font-family: 'Lato', sans-serif;
+	
+}
+nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav li { flex-grow: 1; }
+nav a {
+	display: block;
+	padding: 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #000000;
+	border: solid 1px #424242;
+	transition: all 0.5s;
+	text-transform: uppercase;
+}
+nav a:hover {
+	background-color:#4fc3f7; }
+
+/* ASIDE */
+
+aside {
+	display:grid;
+	grid-gap: 0.5rem;
+	padding:0.5rem;
+	background-color:LightGray ;
+}
+
+.card img {
+	width:100%;
+	height:auto;
+	transition:all 1s;
+}
+.card img:hover {
+	filter:invert(100%);
+}
+footer {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	color: #FFFFFF;
+	background-color: #666;
+	padding: 0.3rem;
+	padding-left: 2.2em;
+}
+
+
+@media (orientation: landscape) {
+section {
+	grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+}
+#main {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+aside {
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+}
+nav ul {
+	flex-direction: row;
+}
+a {
+	margin-right:0.2em;
+}
+}
+@media (orientation: portrait) {
+section {
+	grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+#main {
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+}
+aside {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+nav ul {
+	flex-direction: column;
+}
+nav a {
+	margin-bottom:0.2em;
+}
+}
