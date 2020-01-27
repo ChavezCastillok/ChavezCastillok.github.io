@@ -59,9 +59,9 @@ Vue.component('pie', {
     <footer id="pie">
             <section class="pies">
                 <p><small><a name="contacto"></a>Información de contacto:</small></p>
-                <p><small>Email <a href="mailto:socialcck@outlook.com"
-                            class="enlace">socialcck@outlook.com</a></small><br>
-                    <small>Twitter && Telegram <a class="enlace" href="https://twitter.com/chavezcastillok">
+                <p><small>Email <a href="mailto:skachc@gmail.com"
+                            class="enlace">skachc@gmail.com</a></small><br>
+                    <small>Twitter: <a class="enlace" href="https://twitter.com/chavezcastillok">
                             @ChavezCastillok</a></small><br>
                     <small>San Cristóbal, Venezuela.</small>
                 </p>
