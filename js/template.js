@@ -61,7 +61,7 @@ Vue.component('pie', {
                 <p><small><a name="contacto"></a>Información de contacto:</small></p>
                 <p><small>Email <a href="mailto:skachc@gmail.com"
                             class="enlace">skachc@gmail.com</a></small><br>
-                    <small>Twitter: <a class="enlace" href="https://twitter.com/chavezcastillok">
+                    <small>Twitter <a class="enlace" href="https://twitter.com/chavezcastillok">
                             @ChavezCastillok</a></small><br>
                     <small>San Cristóbal, Venezuela.</small>
                 </p>
@@ -71,10 +71,15 @@ Vue.component('pie', {
                 <p><small><a href="#inicio" class="enlace">↑ Volver al inicio ↑</a></small></p>
             </section>
             <section class="pies">
-                <p>&copy; 2018-2019</p>
+                <p>&copy; 2018 - {{ año }}</p>
                 <p><small>... end web.</small></p>
             </section>
     </footer>
     </div>
-    `
+    `,
+    data() {
+        return {
+            año: new Date().getFullYear()
+        };  
+    }
 });
