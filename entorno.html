@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCK: Entorno</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        #tablect {
+            display: grid;
+        }
+        #context {
+            border-collapse: collapse;
+            text-align: center;
+            font-family: 'Liberation Mono';
+        }
+        #context tr td, th {
+            width: 10rem;
+            height: 1.5rem;
+            border: 1px solid coral;
+            padding: .2rem;
+        }
+        #context th {
+            background-color: darkslategray;
+            color: ghostwhite;
+        }
+        #context td {
+            background-color: ghostwhite;
+        }
+        #context a {
+            text-decoration: none;
+            color: coral;
+            font-style: oblique;
+        }
+    </style>
+
+    <script src="js/vue.js"></script>
+    <script src="js/appVue.js"></script>
+    <script src="js/template.js"></script>
+</head>
+
+<body>
+    <div id="page">
+        <cabecera></cabecera>
+        <section class="seccion">
+            <h1>Entorno de trabajo informático</h1>
+            <article id="tablect">
+                <table id="context">
+                    <thead>
+                        <th colspan="3">With this programs and apps</th>
+                    </thead>
+                    <tr>
+                        <th>Description</th>
+                        <th colspan="2">Name</th>
+                    </tr>
+                    <tr>
+                        <th>Core</th>
+                        <td><a href="">Microsoft</a></td>
+                        <td><a href="">Linux</a></td>
+                    </tr>
+                    <tr>
+                        <th>Operative System</th>
+                        <td><a href="">Windows</a></td>
+                        <td><a href="">Fedora</a></td>
+                    </tr>
+                    <tr>
+                        <th>Suite Ofimatica</th>
+                        <td colspan="2"><a href="">LibreOffice</a></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Web Browser</th>
+                        <td colspan="2"><a href="">Mozilla Firefox</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="">Chromiun Based</a></td>
+                    </tr>
+                    <tr>
+                        <th>Ebook reader</th>
+                        <td><a href="">SumatraPDF</a></td>
+                        <td><a href="">Foliate</a></td>
+                    </tr>
+                    <tr>
+                        <th>Reproductor Multimedia</th>
+                        <td colspan="2"><a href="">VideoLAN VLC</a></td>
+                    </tr>
+                    <tr>
+                        <th>Reproductor de music</th>
+                        <td colspan="2"><a href="">Audacious</a></td>
+                    </tr>
+                    <tr>
+                        <th>Photo Admin</th>
+                        <td colspan="2"><a href="">XNViewMP</a></td>
+                    </tr>
+                    <tr>
+                        <th>Draw</th>
+                        <td colspan="2"><a href="">Inkscape</a></td>
+                    </tr>
+                    <tr>
+                        <th>compresion/desc</th>
+                        <td><a href="">7-Zip</a></td>
+                        <td><a href="">Ark</a></td>
+                    </tr>
+                    <tr>
+                        <th>Gestor torrent</th>
+                        <td colspan="2"><a href="">Qbittorrent</a></td>
+                    </tr>
+                    <tr>
+                        <th>Code editor</th>
+                        <td colspan="2"><a href="">VS Code</a></td>
+                    </tr>
+                </table>
+            </article>
+
+        </section>
+        <pie></pie>
+    </div>
+
+</body>
+
+</html>

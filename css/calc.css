@@ -1,5 +1,9 @@
 /* Estilos especificos */
 
+.seccion {
+    font-family: 'Carlito';
+}
+
 #calculadora {
     text-align: center;
 }
@@ -27,4 +31,11 @@
 
 .mostrar_btn {
     display: inline;
+}
+
+@media (orientation: landscape) {
+    .seccion {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
 }

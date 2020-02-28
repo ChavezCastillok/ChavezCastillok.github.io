@@ -9,7 +9,7 @@ Vue.component('cabecera', {
     `,
     data() {
         return {
-            titulo: 'CCKevin'
+            titulo: 'ChavezCastillok'
         }
     }
 });
@@ -32,19 +32,11 @@ Vue.component('opciones', {
                     url: 'index.html'
                 },
                 {
-                    nombre: 'Calculadora',
-                    url: 'calculadora.html'
+                    nombre: 'Blog',
+                    url: 'https://radickl.wordpress.com/'
                 },
                 {
-                    nombre: 'Frases',
-                    url: 'frases.html'
-                },
-                {
-                    nombre: 'Cronómetro',
-                    url: 'index.html#crono'
-                },
-                {
-                    nombre: 'Contactar',
+                    nombre: 'About me',
                     url: '#contacto'
                 }
             ]
@@ -58,16 +50,14 @@ Vue.component('pie', {
     <div>
     <footer id="pie">
             <section class="pies">
-                <p><small><a name="contacto"></a>Información de contacto:</small></p>
+                <p><small><a name="contacto"></a>Contact me:</small></p>
                 <p><small>Email <a href="mailto:skachc@gmail.com"
                             class="enlace">skachc@gmail.com</a></small><br>
-                    <small>Twitter <a class="enlace" href="https://twitter.com/chavezcastillok">
-                            @ChavezCastillok</a></small><br>
-                    <small>San Cristóbal, Venezuela.</small>
+                    <small>From <em>San Cristóbal, Venezuela.</em></small>
                 </p>
             </section>
             <section class="pies">
-                <p><small id="fechalpie"></small></p>
+                <p><small>{{ fecha }}</small></p>
                 <p><small><a href="#inicio" class="enlace">↑ Volver al inicio ↑</a></small></p>
             </section>
             <section class="pies">
@@ -79,6 +69,7 @@ Vue.component('pie', {
     `,
     data() {
         return {
+            fecha: new Date().toDateString(),
             año: new Date().getFullYear()
         };  
     }

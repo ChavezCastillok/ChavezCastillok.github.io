@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADICKL: Canvas lab</title>
+    <link rel="stylesheet" href="css/index.css" media="all">
+    <style>
+        main {
+            text-align: center;
+        }
+    </style>
+
+    <script src="js/vue.js"></script>
+    <script src="js/appVue.js"></script>
+    <script src="js/labjs.js"></script>
+    <script src="js/template.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            star_hot()
+        })
+
+        function star_hot() {
+            let lienzo = document.getElementById('miCanvas');
+            // relleno con gradiente radial o circular
+            let contexto = lienzo.getContext('2d');
+            contexto.rect(0, 0, lienzo.width, lienzo.height); // crea un rectangulo
+
+            let gradiente = contexto.createRadialGradient(200, 50, 10, 238, 50, 300);
+            gradiente.addColorStop(0, 'red');
+            gradiente.addColorStop(0.5, 'orange');
+            gradiente.addColorStop(1, 'black');
+            contexto.fillStyle = gradiente;
+            contexto.fill();
+
+            // escribir sobre el lienzo
+            cadena = "<canvas> + JS"
+            contexto.font = 'bold 24pt monospace'; // define la fuente, su estilo y tamaño
+            contexto.fillStyle = 'yellow';
+            contexto.fillText(cadena, 100, 380);
+            contexto.strokeStyle = 'red';
+            contexto.strokeText(cadena, 100, 380);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <cabecera></cabecera>
+        <main>
+            <canvas id="miCanvas" width="400" height="400">
+                Su navegador no soporta el elemento Canvas.
+            </canvas>
+        </main>
+        <pie></pie>
+    </div>
+</body>
+
+</html>

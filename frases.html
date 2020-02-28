@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/citas_slide.css" />
 
   <script src="js/vue.js"></script>
+  <script src="js/appVue.js"></script>
   <script src="js/labjs.js"></script>
   <script src="js/template.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
@@ -50,6 +51,7 @@
 
     function abrir_edicion() {
       clearTimeout(t);
+      $("")
 
       $("#persona_d").html(glr[actual].persona);
       $("#frase_d").html(glr[actual].frase);

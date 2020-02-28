@@ -1,22 +1,30 @@
 @charset "utf-8";
 
 /* CSS Document */
-html,
+html{
+    display: flex;
+    justify-content: center;
+    background-color: darkslategray;
+}
 body {
-    border: 1px dashed darkslateblue;
+    max-width: 1200px;
     text-align: justify;
-    font-family: 'Noto Sans';
+    font-family: 'Rubik';
     background-color: slategray;
-    color: darkmagenta;
-    margin: 0px;
-    padding: 0px;
+    color: darkslategray;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
 }
 
 #cabecera {
     text-align: center;
     margin-bottom: .4rem;
-    background-color: darkslateblue;
-    box-shadow: darkmagenta 0px 6px 6px;
+    background-color: darkslategray;
+    /* box-shadow: darkmagenta 0px 6px 6px; */
 }
 
 #titulopp {
@@ -26,16 +34,16 @@ body {
     padding: .2rem 1rem;
 
     border-radius: 30px;
-    border: 2px solid darkslateblue;
+    border: 2px solid darkslategray;
 
-    box-shadow: ghostwhite 0px 0px 10px;
-    background: -webkit-linear-gradient(top, darkmagenta, darkslateblue);
+    box-shadow: coral 0px 0px 10px;
+    background: -webkit-linear-gradient(top, coral, darkslategray);
 }
 
 #titulopp a {
     text-decoration: none;
     color: ghostwhite;
-    text-shadow: black -1px 1px 2px;
+    text-shadow: darkslategray -1px 1px 2px;
 }
 
 #minititle {
@@ -70,20 +78,27 @@ body {
     /* arriba, derecha, abajo, izquierda */
     margin-bottom: .5rem;
     padding: .4rem;
-    color: darkmagenta;
-    background-color: ghostwhite;
+    color: darkslategray;
+    background-color: lightslategrey;
 }
 
 #menu a:hover {
-    background-color: black;
-    color: deeppink;
+    background-color: coral;
+    color: darkslategray;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-#secciones,
 #cuerpo {
-    display: grid;
+    display: flex;
+    justify-content: center;
+}
+
+#secciones
+ {
+    display: flex;
+    max-width: 1080px;
+    justify-content: center;
 }
 
 .tt-set-pp {
@@ -91,34 +106,27 @@ body {
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    color: ghostwhite;
-    background-color: darkslateblue;
-    box-shadow: darkmagenta 0px 6px 6px;
-}
-
-.seccion iframe {
-    min-width: 360px;
-    height: 480px;
-    border: 1px solid darkslateblue;
+    background-color: darkslategray;
+    box-shadow: coral 0px 6px 6px;
 }
 
 .seccion {
+    display: flex;
+    flex-direction: column;
     margin: .2rem;
     padding: .5rem;
     background-color: rgba(248, 248, 255, 0.1);
 }
 
+#welcome {
+    text-align: center;
+}
+
 .seccion>h1 {
-    color: deeppink;
+    color: coral;
     text-align: center;
     text-shadow: 1px 1px black;
     font-style: italic;
-}
-
-#adicional h1 {
-    text-align: center;
-    color: deeppink;
-    text-shadow: 1px 1px 1px darkslateblue;
 }
 
 .cambio {
@@ -147,40 +155,52 @@ body {
 
 .seccion article {
     background: ghostwhite;
-    border: 1px solid darkslateblue;
+    border: 1px solid darkslategray;
     margin: .2rem;
     padding: 1rem;
     margin-bottom: 15px;
-}
-
-.seccion article {
     object-fit: scale-down;
 }
 
 #pie {
     display: grid;
-    background-color: darkslateblue;
+    background-color: darkslategray;
 }
 
 .pies {
-    color: ghostwhite;
+    color: lightslategray;
     text-align: center;
 }
 
 .enlace {
     /* que tambien hacen de titulos */
-    color: deeppink;
+    color: coral;
     text-decoration: none;
     font-style: italic;
     padding: 0 .6rem 0 .6rem;
 }
 
 .enlace:hover {
-    background-color: black;
-    color: deeppink;
+    background-color: coral;
+    color: darkslategray;
+    padding: .1rem;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1267px) {
+/* imagen INFINITO RADICAL */
+#radin {
+    max-width: 360px;
+    max-height: 360px;
+    border-radius: 50%;
+    border: .2rem solid darkslategray;
+}
+
+@media screen and (max-width: 809px){
+    #secciones {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1267px) {
     #cabecera {
         display: flex;
         justify-content: space-around;
@@ -188,8 +208,9 @@ body {
         padding: .4rem;
     }
 
-    #cuerpo {
-        grid-template-columns: auto 275px;
+    #secciones {
+        display: grid;
+        grid-template-columns: auto 290px;
         grid-template-rows: auto;
     }
 
@@ -254,6 +275,10 @@ body {
     #pie {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+    #radin{
+        width: 100%;
+        height: 100%;
     }
 }
 

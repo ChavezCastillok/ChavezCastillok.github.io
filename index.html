@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CCKevin</title>
-    <link rel="shortcut icon" href="images/logoCk.png" type="image/x-icon">
+    <title>ChavezCastillok</title>
+    <link rel="shortcut icon" href="images/logock.png" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css" media="all">
-    <link rel="stylesheet" href="css/calc.css">
 
     <!-- production version, optimized for size and speed -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     -->
     <script src="js/vue.js"></script>
+    <script src="js/appVue.js"></script>
     <script src="js/labjs.js"></script>
     <script src="js/template.js"></script>
-    <script src="js/calc.js"></script>
 </head>
 
 <body>
@@ -28,227 +27,35 @@
 
             <main id="secciones">
 
-                <section class="seccion">
-                    <h1 class="tt-set-pp"><a name="secciones">Bienvenidos a mi página web</a></h1>
-                    <article>
-                        <p>Mis practicas frontend con HTML, CSS & Javascript (Vanilla, JQuery y VueJS).</p>
-                    </article>
-                    <article>
-                        <h1>Enlaces:</h1>
-                        <ul>
-                            <li><a href="radickl.html">RADICKL</a></li>
-                        </ul>
-                    </article>
+                <section class="seccion" id="welcome">
+                    <h1>Welcome to</h1>
+                    <p><small>My web site</small></p>
+                    <p><a href="canvas.html"><img src="images/ck.svg" alt="Logotipo alfa" id="radin"></a></p>
                 </section>
 
                 <section class="seccion">
-                    <h1>Tasks <a href="#" class="enlace">curso Apps Web 9ed. MiriadaX</a></h1>
+                    <h1>Enlaces</h1>
                     <article>
-                        <h1>Tasks realizadas:</h1>
+                        <h1>Webs</h1>
+                        <ul>
+                            <li><a class="enlace" href="http://CCKevin.neocities.org/">CCKevin @ Neocities</a>
+                                <p>Web previa, desarrollada durante el curso de Apps Web 9ed. en MiriadaX (2019) y publicada en <cite>Neocities.org</cite></p>
+                            </li>
+                            <li><a class="enlace" href="calculadora.html">Calculadora</a></li>
+                            <li><a class="enlace" href="canvas.html">Canvas lab</a></li>
+                            <li><a class="enlace" href="entorno.html">Entorno de trabajo</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h1>Redes sociales</h1>
                         <ol>
-                            <li>Mod 1 -> Intro HTML5 <a href="taskmod1.html" class="enlace">ver</a></li>
-                            <li>Mod 2 -> HTML5 & CSS3 <a href="taskmod2/alumno.html" class="enlace">ver</a></li>
-                            <li>Mod 3 -> Intro Javascript <a href="taskmod3.html" class="enlace">ver</a></li>
-                            <li>Mod 4 -> Calculadora v1.0<a href="taskmod4.html" class="enlace">ver</a></li>
-                            <li>Mod 5 -> Calculadora v2.0<a href="calculadora.html" class="enlace">ver</a></li>
-                            <li>Mod 6 -> Calculadora v2.0 en JQuery<a href="taskmod6/calc_cck.html" class="enlace">ver.</a></li>
-                            <li>Mod 7 y 8 -> Carrusel de citas en JQuery<a href="frases.html" class="enlace">ver.</a></li>
-                            <li>Mod 09 -> Final. Sobre Geolocation, sin desarrollar por cierre de la API de GMaps.</li>
+                            <li>Twitter <a class="enlace" href="https://twitter.com/chavezcastillok">@ChavezCastillok</a></li>
+                            <li>Github <a class="enlace" href="http://">abc</a></li>
                         </ol>
                     </article>
-                    <article>
-                        <h1>Ultima tarea realizada Mod_07</h1>
-                        <iframe src="frases.html" frameborder="0"></iframe>
-                        <p>Carrusel de citas. Falta mejorar presentación en orientación vertical.</p>
-                    </article>
-                </section>
-
-                <section class="seccion">
-                    <h1><a name="labjs" class="enlace">Area de Pruebas JS</a></h1>
-                    <article>
-                        <h1>Interacción basica</h1>
-                        <p>
-                            Este curso tiene por objetivo acercar los conceptos iniciales para
-                            introducirse en el mundo de las webs dinamicas elaboradas con ES6.
-                        </p>
-                        <h2>JS</h2>
-                        <p>Prueba haciendo click sobre la opción remarcada:</p>
-                        <ul>
-                            <li>(alert): <span id="alertajs">Elevar una <mark>alerta</mark> </span></li>
-                            <li>(confirm): <span id="confirmjs">Elevar una <mark>confirmación</mark> </span></li>
-                            <li>(prompt): <span id="promptjs">Elevar entrada con <mark>prompt</mark> </span></li>
-                        </ul>
-                        <p id="resultprompt">...Salida interactiva...</p>
-                    </article>
-
-                    <article>
-                        <h1>Lab with API Canvas.</h1>
-                        <h2>HTML5 and ES6</h2>
-                        <canvas id="miCanvas" width="400" height="400">
-                            Su navegador no soporta el elemento Canvas.
-                        </canvas>
-                        <p>Imagen creada usando la API Canvas</p>
-                    </article>
-                </section>
-
-                <section class="seccion">
-                    <h1><a name="exploremos" class="enlace"><em>Ready!</em>, CCK</a></h1>
-                    <article>
-                        <p>En time libre. Imagen IR,...</p>
-                        <img src="images/logo1.png" alt="Logotipo alfa" id="radin">
-                        <p><strong>Infinito Radical</strong></p>
-                    </article>
-
                 </section>
 
             </main>
-
-            <aside id="adicional">
-                <h1>Componentes</h1>
-                <section class="seccion">
-                    <article class="cambio">
-                        <h1>Cambio Monetario</h1>
-                        <section>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th colspan="3">Tasas</th>
-                                    </tr>
-
-                                    <tr>
-                                        <td>1 USD → </td>
-                                        <td><input type="text" v-model="tasadv"></td>
-                                        <td>VES</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1 USD → </td>
-                                        <td><input type="text" v-model="tasadc"></td>
-                                        <td>COP</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1 VES → </td>
-                                        <td><input type="text" v-model="tasapc"></td>
-                                        <td>COP</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th colspan="2">VES a COP y USD</th>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="text" placeholder="Monto" v-model.number="ves"></td>
-                                        <td>VES</td>
-                                    </tr>
-                                    <tr>
-                                        <td><output>{{ ves_cop }}</output></td>
-                                        <td>COP</td>
-                                    </tr>
-                                    <tr>
-                                        <td><output>{{ ves_usd }}</output></td>
-                                        <td>USD</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th colspan="2">COP a VES y USD</th>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="text" placeholder="Monto" v-model.number="cop"></td>
-                                        <td>COP</td>
-                                    </tr>
-                                    <tr>
-                                        <td><output>{{ cop_ves }}</output></td>
-                                        <td>VES</td>
-                                    </tr>
-                                    <tr>
-                                        <td><output>{{ cop_usd }}</output></td>
-                                        <td>USD</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th colspan="2">USD a COP y VES</th>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="text" placeholder="Monto" v-model.number="usd"></td>
-                                        <td>USD</td>
-                                    </tr>
-                                    <tr>
-                                        <td><output>{{ usd_cop }}</output></td>
-                                        <td>COP</td>
-                                    </tr>
-                                    <tr>
-                                        <td><output>{{ usd_ves }}</output></td>
-                                        <td>VES</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </section>
-
-                        <p>
-                            <small>
-                                <b>VES:</b> Bolivar "Soberano" de Venezuela. <br>
-                                <b>COP:</b> Peso Colombiano. <br>
-                                <b>USD:</b> Dolar Estadounidense.
-                            </small>
-                        </p>
-                    </article>
-
-                    <article id="calculadora">
-                        <h1>Calc CCK</h1>
-                        <p>
-                            <label for="entrada"><input type="text" id="num" placeholder="ingrese un número"></label>
-                            <button id="ToM">Guardar</button>
-                            <label for=""><output id="nmnum"></output></label>
-                            <button id="FromM">Utilizar</button>
-                        </p>
-                        <small>Operaciones unitarias</small>
-                        <p>
-                            <button id="x_al_cuadrado">x<sup>2</sup></button>
-                            <button id="inverso_de_x"><sup>1</sup>/<sub>x</sub></button>
-                            <button id="raiz_cuadrada_de_x">&radic;x</button>
-                            <button id="parte_entera_de_x">|x|</button>
-                        </p>
-                        <p>
-                            <button id="2_a_la_n"><sub>2</sub><sup>n</sup></button>
-                            <button id="factorial_de_n">n!</button>
-                        </p>
-                        <small>Operaciones binarias</small>
-                        <p>
-                            <button id="suma">+</button>
-                            <button id="resta">-</button>
-                            <button id="multiplicacion">x</button>
-                            <button id="division">/</button>
-                            <button id="x_a_la_y">x<sup>y</sup></button>
-                        </p>
-                        <p>
-                            <button id="realizar_op">=</button>
-                        </p>
-                        <small>Operaciones n arias</small>
-                        <p>
-                            <button id="sumatorio_de_nn">&sum;x,y,...</button>
-                            <button id="producto_de_nn">&Product;x,y,...</button>
-                        </p>
-                        <hr>
-                        <p><a href="calculadora.html" class="enlace">Ver instrucciones.</a></p>
-                    </article>
-
-                    <article id="cronometro">
-                        <h2><a name="crono" class="enlace">Cronómetro</a></h2>
-                        <h3><span id="crono"> 0.0 </span> segundos </h3>
-                        <button type="button" id="cambiar">Arrancar/Parar</button>
-                        <button type="button" id="inicializar">Inicializar</button>
-                        <h3>Registro:</h3>
-                        <p>Por desarrollar...</p>
-                    </article>
-                </section>
-            </aside>
         </div>
 
         <pie></pie>
