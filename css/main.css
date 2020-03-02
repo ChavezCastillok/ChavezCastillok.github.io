@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: darkslategray;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  color: ghostwhite;
+  font-family: "Carlito";
+}
+
+article {
+  background-color: rgba(248, 248, 255, 0.2);
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: violet;
+}
+
+a {
+  font-style: oblique;
+  text-decoration: none;
+  color: lightgreen;
+}
+a:hover {
+  font-weight: bold;
+  padding: 0.1rem;
+  color: violet;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  border-left: 1px solid violet;
+  border-right: 1px solid green;
+}
+
+#titulopp {
+  font-family: "Rubik";
+  color: darkviolet;
+}
+#titulopp:hover {
+  background-color: darkslategray;
+  color: green;
+}
+
+#logo {
+  width: 100%;
+  height: 100%;
+  max-width: 360px;
+  max-height: 360px;
+  border-radius: 50%;
+}
+
+#menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: stretch;
+}
+#menu a {
+  display: block;
+  margin: 0.3rem;
+}
+
+.seccion {
+  padding: 1rem;
+}
+.seccion h1 {
+  padding: .5rem;
+}
+
+#pie {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: .8rem;
+}
+
+@media (orientation: portrait) {
+  #pie {
+    display: block;
+  }
+}

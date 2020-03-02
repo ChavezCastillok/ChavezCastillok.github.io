@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ChavezCastillok</title>
-    <link rel="shortcut icon" href="images/logock.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/index.css" media="all">
+    <link rel="shortcut icon" href="images/logock.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" media="all" />
 
     <!-- production version, optimized for size and speed -->
     <!--
@@ -17,50 +16,54 @@
     <script src="js/appVue.js"></script>
     <script src="js/labjs.js"></script>
     <script src="js/template.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="vacio"></div>
     <div id="page">
-        <cabecera></cabecera>
+      <cabecera></cabecera>
 
-        <div id="cuerpo">
+      <div id="cuerpo">
+        <main id="secciones">
+          <section class="seccion" id="welcome">
+            <p>
+              <a href="canvas.html"
+                ><img src="images/ck.svg" alt="Logotipo alfa" id="logo"
+              /></a>
+            </p>
+          </section>
 
-            <main id="secciones">
+          <section class="seccion">
+            <h1>Enlaces</h1>
+            <article>
+              <h1>Webs</h1>
+              <ul>
+                <li>
+                  <a class="enlace" href="http://CCKevin.neocities.org/"
+                    >CCKevin @ Neocities:</a
+                  >
+                  Web desarrollada durante el curso de Apps Web 9ed. en MiriadaX
+                  (2019) y publicada en <cite>Neocities.org</cite>
+                </li>
+              </ul>
+              <h1>Sociales</h1>
+              <p>
+                <a class="enlace" href="https://twitter.com/chavezcastillok"
+                  >Twitter</a
+                >
+                |
+                <a class="enlace" href="https://github.com/ChavezCastillok"
+                  >GitHub</a
+                >
+              </p>
+            </article>
+          </section>
+        </main>
+      </div>
 
-                <section class="seccion" id="welcome">
-                    <h1>Welcome to</h1>
-                    <p><small>My web site</small></p>
-                    <p><a href="canvas.html"><img src="images/ck.svg" alt="Logotipo alfa" id="radin"></a></p>
-                </section>
-
-                <section class="seccion">
-                    <h1>Enlaces</h1>
-                    <article>
-                        <h1>Webs</h1>
-                        <ul>
-                            <li><a class="enlace" href="http://CCKevin.neocities.org/">CCKevin @ Neocities</a>
-                                <p>Web previa, desarrollada durante el curso de Apps Web 9ed. en MiriadaX (2019) y publicada en <cite>Neocities.org</cite></p>
-                            </li>
-                            <li><a class="enlace" href="calculadora.html">Calculadora</a></li>
-                            <li><a class="enlace" href="canvas.html">Canvas lab</a></li>
-                            <li><a class="enlace" href="entorno.html">Entorno de trabajo</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <h1>Redes sociales</h1>
-                        <ol>
-                            <li>Twitter <a class="enlace" href="https://twitter.com/chavezcastillok">@ChavezCastillok</a></li>
-                            <li>Github <a class="enlace" href="http://">abc</a></li>
-                        </ol>
-                    </article>
-                </section>
-
-            </main>
-        </div>
-
-        <pie></pie>
+      <pie></pie>
     </div>
 
-</body>
-
+    <div class="vacio"></div>
+  </body>
 </html>

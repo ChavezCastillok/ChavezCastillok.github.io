@@ -32,12 +32,12 @@ h1, h2, h3 {
     max-width: 360px;
     margin: .4rem;
     padding: .2rem 1rem;
-
+/*
     border-radius: 30px;
     border: 2px solid darkslategray;
 
     box-shadow: coral 0px 0px 10px;
-    background: -webkit-linear-gradient(top, coral, darkslategray);
+    background: -webkit-linear-gradient(top, coral, darkslategray);*/
 }
 
 #titulopp a {
@@ -97,6 +97,7 @@ h1, h2, h3 {
 #secciones
  {
     display: flex;
+    flex-direction: column;
     max-width: 1080px;
     justify-content: center;
 }
@@ -127,30 +128,6 @@ h1, h2, h3 {
     text-align: center;
     text-shadow: 1px 1px black;
     font-style: italic;
-}
-
-.cambio {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.cambio section div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: .6rem;
-    border: 1px dashed darkslateblue;
-    width: 190px;
-}
-
-.cambio th{
-    font-weight: bolder;
-    text-align: center;
-}
-
-.cambio input {
-    width: 4rem;
 }
 
 .seccion article {
@@ -192,6 +169,43 @@ h1, h2, h3 {
     max-height: 360px;
     border-radius: 50%;
     border: .2rem solid darkslategray;
+}
+
+/* Tabla entorno IT */
+#tablect {
+    display: flex;
+    flex-direction: column;
+    max-width: 690px;
+}
+#context {
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Liberation Mono';
+}
+#context tr td, th {
+    width: 10rem;
+    height: 1.5rem;
+    border: 1px solid coral;
+    padding: .2rem;
+}
+#context th {
+    background-color: darkslategray;
+    color: ghostwhite;
+}
+#context td {
+    background-color: ghostwhite;
+}
+#context a {
+    text-decoration: none;
+    color: coral;
+    font-style: oblique;
+}
+/* End Tabla entorno IT */
+
+#miCanvas {
+    width: 400px;
+    height: 400px;
+    align-content: center;
 }
 
 @media screen and (max-width: 809px){

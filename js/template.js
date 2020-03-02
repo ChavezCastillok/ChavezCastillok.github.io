@@ -1,22 +1,23 @@
-Vue.component('cabecera', {
-    template: `
+Vue.component("cabecera", {
+  template: `
     <div>
     <header id="cabecera">
-            <h1 id="titulopp"><a name="inicio" href="index.html"><em>{{titulo}}</em></a></h1>
             <opciones></opciones>
+            <h1><a id="titulopp" name="inicio" href="index.html"><em>{{titulo}}</em></a></h1>
+            <h5>Welcome to my web site</h5>
     </header>
     </div>
     `,
-    data() {
-        return {
-            titulo: 'ChavezCastillok'
-        }
-    }
+  data() {
+    return {
+      titulo: "ChavezCastillok"
+    };
+  }
 });
 
-Vue.component('opciones', {
-    template: //html
-        `
+Vue.component("opciones", {
+  //html
+  template: `
     <div>
         <nav id="menu">
             <ul>
@@ -25,28 +26,29 @@ Vue.component('opciones', {
         </nav>
     </div>
     `,
-    data() {
-        return {
-            menu: [{
-                    nombre: 'Inicio',
-                    url: 'index.html'
-                },
-                {
-                    nombre: 'Blog',
-                    url: 'https://radickl.wordpress.com/'
-                },
-                {
-                    nombre: 'About me',
-                    url: '#contacto'
-                }
-            ]
+  data() {
+    return {
+      menu: [
+        {
+          nombre: "Home",
+          url: "index.html"
+        },
+        {
+          nombre: "Blog",
+          url: "https://radickl.wordpress.com/"
+        },
+        {
+          nombre: "About me",
+          url: "#contacto"
         }
-    }
+      ]
+    };
+  }
 });
 
-Vue.component('pie', {
-    template: //html
-        `
+Vue.component("pie", {
+  //html
+  template: `
     <div>
     <footer id="pie">
             <section class="pies">
@@ -57,20 +59,16 @@ Vue.component('pie', {
                 </p>
             </section>
             <section class="pies">
-                <p><small>{{ fecha }}</small></p>
-                <p><small><a href="#inicio" class="enlace">↑ Volver al inicio ↑</a></small></p>
-            </section>
-            <section class="pies">
                 <p>&copy; 2018 - {{ año }}</p>
+                <p><small><a href="#inicio" class="enlace">↑ Volver al inicio ↑</a></small></p>
                 <p><small>... end web.</small></p>
             </section>
     </footer>
     </div>
     `,
-    data() {
-        return {
-            fecha: new Date().toDateString(),
-            año: new Date().getFullYear()
-        };  
-    }
+  data() {
+    return {
+      año: new Date().getFullYear()
+    };
+  }
 });
