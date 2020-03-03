@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ChavezCastillok</title>
+
     <link rel="shortcut icon" href="images/logock.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" media="all" />
 
-    <!-- production version, optimized for size and speed -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    -->
-    <script src="js/vue.js"></script>
-    <script src="js/appVue.js"></script>
-    <script src="js/labjs.js"></script>
-    <script src="js/template.js"></script>
+    <script src="js/main.js"></script>
   </head>
 
   <body>
     <div class="vacio"></div>
     <div id="page">
-      <cabecera></cabecera>
+      <header id="cabecera">
+        <nav id="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://radickl.wordpress.com/">Blog</a></li>
+            <li><a href="#contacto">About me</a></li>
+          </ul>
+        </nav>
+        <h1>
+          <a id="titulopp" name="inicio" href="index.html">ChavezCastillok</a>
+        </h1>
+        <h5>Welcome to my web site</h5>
+      </header>
 
       <div id="cuerpo">
         <main id="secciones">
           <section class="seccion" id="welcome">
             <p>
-              <a href="canvas.html"
+              <a href="#"
                 ><img src="images/ck.svg" alt="Logotipo alfa" id="logo"
               /></a>
             </p>
@@ -61,7 +67,31 @@
         </main>
       </div>
 
-      <pie></pie>
+      <footer id="pie">
+        <section class="pies">
+          <p>
+            <small><a name="contacto"></a>Contact me:</small>
+          </p>
+          <p>
+            <small
+              >Email
+              <a href="mailto:skachc@gmail.com" class="enlace"
+                >skachc@gmail.com</a
+              ></small
+            ><br />
+            <small>From <em>San Cristóbal, Venezuela.</em></small>
+          </p>
+        </section>
+        <section class="pies">
+          <p>&copy; 2018 - <span id="currentYear"></span> </p>
+          <p>
+            <small
+              ><a href="#inicio" class="enlace">↑ Volver al inicio ↑</a></small
+            >
+          </p>
+          <p><small>... end web.</small></p>
+        </section>
+      </footer>
     </div>
 
     <div class="vacio"></div>
