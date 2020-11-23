@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: darkslategray;
+  background-color: darkslategrey;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   color: ghostwhite;
-  font-family: "Carlito";
+  font-family: "Reem Kufi";
 }
 
 article {
@@ -37,19 +37,20 @@ a:hover {
   color: violet;
 }
 
+.vacio {
+  text-align: center;
+}
+
 #page {
   min-width: 300px;
   display: flex;
   flex-direction: column;
 
   text-align: center;
-
-  border-left: 1px solid violet;
-  border-right: 1px solid green;
 }
 
 #titulopp {
-  font-family: "Rubik";
+  font-family: "Reem Kufi";
   color: darkviolet;
 }
 #titulopp:hover {
@@ -63,6 +64,7 @@ a:hover {
   max-width: 360px;
   max-height: 360px;
   border-radius: 50%;
+  margin-top: 1rem;
 }
 
 #menu ul {
@@ -70,17 +72,12 @@ a:hover {
   list-style: none;
   justify-content: center;
   align-items: stretch;
+  background-color: rgba(248, 248, 255, 0.2);
+  margin-top: .5rem;
 }
 #menu a {
   display: block;
   margin: 0.3rem;
-}
-
-.seccion {
-  padding: 1rem;
-}
-.seccion h1 {
-  padding: .5rem;
 }
 
 #pie {
