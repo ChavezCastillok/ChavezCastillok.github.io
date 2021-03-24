@@ -7,98 +7,75 @@
     <title>ChavezCastillok</title>
 
     <link rel="shortcut icon" href="images/logock.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/bulma.min.css" />
     <link rel="stylesheet" href="css/main.css" media="all" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script src="js/main.js"></script>
   </head>
 
   <body>
-    <div>
-      <nav id="nav-top">
-      <ul>
-        <li>
-          <a id="title-web" href="index.html">Chavez Castillo k</a>
-        </li>
-        <li id="title-page">/ Home</li>
-        <ul>
-          <li><a href="https://github.com/ChavezCastillok">@GitHub</a></li>
-          <li><a href="https://twitter.com/chavezcastillok">@Twitter</a></li>
-        </ul>
-      </ul>
-    </nav>
-
-    <main>
-      <section class="seccion" id="presentacion">
-        <article>
-          <h1>Presentación</h1>
-          <p>
-            Hola, mi nombre es Kevin y este es mi sitio web personal, soy
-            aficionado a la informática y me dedico a conocer sobre el tema de
-            forma independiente, por supuesto, con la ayuda de libros digitales
-            y del inumerable material que se puede conseguir en Internet
-            (cursos, videos, blogs...) a mi propio ritmo. Bienvenido.
-          </p>
-          <br />
-          <p>
-            Lo que presento aqui no es más que lo que voy haciendo, mis avances
-            y desarrollos con interes profesional, mis blogs, y enlace a mis
-            redes sociales.
-          </p>
-        </article>
-      </section>
-      <section class="seccion links">
-        <h1>Links</h1>
-        <article>
-          <p>Calc divisas</p>
-          <a href="https://chavezcastillok.github.io/calc-divisas/"
-            >/Calc-divisas</a
-          >
-        </article>
-        <article>
-          <p>@Neocities</p>
-          <a href="https://cckevin.neocities.org/">cckevin.neocities.org</a>
-        </article>
-        <article>
-          <p>Disponible</p>
-        </article>
-      </section>
-      <section class="seccion cv">
-        <h1>Curriculum</h1>
-        <article>
-          <p>@LinkedIn</p>
-          <p>
-            <a href="https://www.linkedin.com/in/kevin-chavez-castillo/"
-              >in/ChavezCastillok</a
+    <div class="container has-text-centered">
+      <div class="hero is-fullheight">
+        <header
+          class="hero-head is-flex-tablet is-justify-content-space-evenly is-align-items-center"
+        >
+          <h1 class="title pt-2">
+            <a class="has-text-white" id="title-web" href="index.html"
+              >Chavez Castillo k</a
             >
-          </p>
-        </article>
-        <h1>Blogs</h1>
-        <article>
-          <p>Personal @wordpress</p>
-          <a href="https://chavezcastilloka.wordpress.com/"
-            >chavezcastilloka.wordpress.com</a
-          >
-        </article>
-        <article>
-          <p>"Un huerto más" @blogger</p>
-          <a href="https://unhuertomas.blogspot.com/"
-            >unhuertomas.blogspot.com</a
-          >
-        </article>
-      </section>
-    </main>
+          </h1>
+          <h2 class="subtitle has-text-white">/ Home</h2>
+        </header>
 
-    <footer id="pie">
-      <article>
-        <p>Send Email</p>
-        <a href="mailto:skachc@gmail.com" class="enlace">skachc@gmail.com</a>
-      </article>
-      <article>
-        <p>San Cristóbal, Venezuela</p>
-        <p>&copy; 2018 - <span id="currentYear"></span></p>
-      </article>
-    </footer>
+        <main class="hero-body columns is-multiline">
+          <div class="column">
+            <h1 class="title">Projects</h1>
+            <article class="box">
+              <a href="https://chavezcastillok.github.io/calc-divisas/"
+                >/Calc-divisas</a
+              >
+            </article>
+            <article class="box">
+              <a href="https://garageatugusto.neocities.org/"
+                >garageatugusto@neocities</a
+              >
+            </article>
+            <article class="box">
+              <a href="https://cckevin.neocities.org/">cckevin@neocities</a>
+            </article>
+          </div>
+          <div class="column">
+            <h1 class="title">Others</h1>
+            <article class="box">
+              <a href="https://chavezcastilloka.wordpress.com/"
+                >Blog personal @wordpress</a
+              >
+            </article>
+          </div>
+        </main>
+
+        <footer
+          class="hero-foot is-inline-flex-tablet is-justify-content-space-evenly is-align-items-center"
+        >
+          <p class="pt-2">
+            <a href="https://github.com/ChavezCastillok"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://twitter.com/chavezcastillok"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/kevin-chavez-castillo/"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </p>
+          <p>From: San Cristóbal, Venezuela</p>
+          <p><span id="currentYear"></span></p>
+        </footer>
+      </div>
     </div>
-    
   </body>
 </html>
