@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/calc-basic.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calc.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        calculadora();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container is-fullhd" id="app">
+      <main class="hero is-fullheight">
+        <div class="hero-head">
+          <navbar-top></navbar-top>
+        </div>
+        <div class="hero-body">
+          <table class="table" id="calc">
+            <caption class="title">
+              <h1>Calculadora</h1>
+            </caption>
+            <thead>
+              <tr>
+                <th colspan="4">
+                  <input
+                    class="input"
+                    type="text"
+                    id="pantalla1"
+                    placeholder="0.0"
+                    readonly
+                  />
+                </th>
+              </tr>
+              <tr>
+                <th colspan="4">
+                  <input
+                    class="input"
+                    type="text"
+                    id="pantalla2"
+                    placeholder="0.0"
+                    readonly
+                  />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button class="button" id="raizCuadrada">&radic;</button>
+                </td>
+                <td><button class="button" id="elevacion">^</button></td>
+                <td><button class="button" id="factorizacion">!</button></td>
+                <td><button class="button" id="cleanScreen">C</button></td>
+              </tr>
+              <tr>
+                <td><button class="button" value="1" id="uno">1</button></td>
+                <td><button class="button" value="2" id="dos">2</button></td>
+                <td><button class="button" value="3" id="tres">3</button></td>
+                <td><button class="button" id="division">/</button></td>
+              </tr>
+              <tr>
+                <td><button class="button" value="4" id="cuatro">4</button></td>
+                <td><button class="button" value="5" id="cinco">5</button></td>
+                <td><button class="button" value="6" id="seis">6</button></td>
+                <td><button class="button" id="multiplicacion">x</button></td>
+              </tr>
+              <tr>
+                <td><button class="button" value="7" id="siete">7</button></td>
+                <td><button class="button" value="8" id="ocho">8</button></td>
+                <td><button class="button" value="9" id="nueve">9</button></td>
+                <td><button class="button" id="resta">-</button></td>
+              </tr>
+              <tr>
+                <td><button class="button" value="0" id="cero">0</button></td>
+                <td><button class="button" id="point">.</button></td>
+                <td><button class="button" id="resultado">=</button></td>
+                <td><button class="button" id="suma">+</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hero-foot">
+          <p>...</p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

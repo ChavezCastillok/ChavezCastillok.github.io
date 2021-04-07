@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ve">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,60 +20,40 @@
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- <script src="js/vue.js"></script> -->
     <script src="js/main.js"></script>
   </head>
 
   <body>
-    <div class="container has-text-centered">
+    <div class="container is-fullhd" id="app">
       <div class="hero is-fullheight">
-        <header
-          class="hero-head is-flex-tablet is-justify-content-space-evenly is-align-items-center"
-        >
-          <h1 class="title pt-2">
-            <a class="has-text-white" id="title-web" href="index.html"
-              >Chavez Castillo k</a
-            >
-          </h1>
-          <h2 class="subtitle has-text-white">/ Home</h2>
+        <header class="hero-head">
+          <navbar-top> </navbar-top>
         </header>
 
-        <main class="hero-body columns is-multiline">
-          <div class="column">
-            <h1 class="title">Projects</h1>
-            <article class="box">
-              <a href="https://chavezcastillok.github.io/calc-divisas/"
-                >/Calc-divisas</a
-              >
-            </article>
-            <article class="box">
-              <a href="https://garageatugusto.neocities.org/"
-                >garageatugusto@neocities</a
-              >
-            </article>
-            <article class="box">
-              <a href="https://cckevin.neocities.org/">cckevin@neocities</a>
-            </article>
-          </div>
-          <div class="column">
-            <h1 class="title">Others</h1>
-            <article class="box">
-              <a href="https://chavezcastilloka.wordpress.com/"
-                >Blog personal @wordpress</a
-              >
-            </article>
-          </div>
+        <main class="hero-body is-flex-direction-column">
+          <figure class="image is-128x128">
+            <img src="images/ck-20.svg" alt="" />
+          </figure>
+          <h1 class="title mt-2">Chavez Castillo k</h1>
+          <h2 class="subtitle">Making magic with the client, stylish.</h2>
         </main>
 
-        <footer
-          class="hero-foot is-inline-flex-tablet is-justify-content-space-evenly is-align-items-center"
-        >
-          <p class="pt-2">
-            <a href="https://github.com/ChavezCastillok"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="https://twitter.com/chavezcastillok"><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href="https://www.linkedin.com/in/kevin-chavez-castillo/"><ion-icon name="logo-linkedin"></ion-icon></a>
-          </p>
-          <p>From: San Cristóbal, Venezuela</p>
-          <p><span id="currentYear"></span></p>
+        <footer class="hero-foot">
+          <nav class="tabs is-boxed is-fullwidth">
+            <ul>
+              <li class="is-active">
+                <a href="index.html">Chavez Castillo k</a>
+              </li>
+              <li><a href="https://cckevin.neocities.org/">CCKevin</a></li>
+              <li>
+                <a href="https://garageatugusto.neocities.org/"
+                  >Garage a tu Gusto</a
+                >
+              </li>
+            </ul>
+          </nav>
         </footer>
       </div>
     </div>
