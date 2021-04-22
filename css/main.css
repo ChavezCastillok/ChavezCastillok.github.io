@@ -1,7 +1,9 @@
+html,
 body {
   color: ghostwhite;
-  font-family: "Rubik";
+  font-family: "comfortaa", "liberation Mono", "Hack";
   background-color: ghostwhite;
+  color: darkgreen;
 }
 
 ion-icon {
@@ -9,25 +11,19 @@ ion-icon {
   color: #8000805a;
 }
 
-.title {
-  color: #0080005a;
-}
-
-.subtitle {
+.title,
+.title a {
   color: #8000805a;
 }
 
-.hero-foot {
-  width: 100%;
-  padding: 0.4rem;
-  background-color: #0080005a;
-}
-.hero-body {
-  justify-content: center;
+.subtitle,
+.content .subtitle {
+  font-size: larger;
+  color: #0080005a;
 }
 
-.hero-foot a {
-  color: ghostwhite;
+.footer {
+  text-align: right;
 }
 
 #imagen {
@@ -36,13 +32,11 @@ ion-icon {
 }
 
 @media screen and (max-width: 768px) {
-  .hero-foot .tabs ul {
-    flex-direction: column-reverse;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .navbar-end {
+  .hero-body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 }

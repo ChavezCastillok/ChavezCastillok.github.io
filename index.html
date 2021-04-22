@@ -20,40 +20,59 @@
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!-- <script src="js/vue.js"></script> -->
     <script src="js/main.js"></script>
   </head>
 
   <body>
-    <div class="container is-fullhd" id="app">
-      <div class="hero is-fullheight">
-        <header class="hero-head">
-          <navbar-top> </navbar-top>
-        </header>
-
-        <main class="hero-body is-flex-direction-column">
-          <figure class="image is-128x128">
-            <img src="images/ck-20.svg" alt="" />
+    <div class="container">
+      <div
+        class="hero is-fullheight is-justify-content-center is-align-items-center"
+      >
+        <main class="hero-body is-flex-tablet">
+          <figure class="image is-128x128 m-2">
+            <img src="images/ck-20.svg" alt="logo-cck" />
           </figure>
-          <h1 class="title mt-2">Chavez Castillo k</h1>
-          <h2 class="subtitle">Making magic with the client, stylish.</h2>
-        </main>
+          <article class="section has-text-centered-mobile">
+            <h1 class="title mt-2">
+              <a href="index.html">Chavez Castillo k</a>
+            </h1>
+            <h2 class="subtitle">Making magic with the client, stylish.</h2>
+            <section class="columns is-mobile">
+              <div class="column">
+                <a href="https://github.com/ChavezCastillok">
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </div>
+              <div class="column">
+                <a href="https://twitter.com/chavezcastillok">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </div>
 
-        <footer class="hero-foot">
-          <nav class="tabs is-boxed is-fullwidth">
-            <ul>
-              <li class="is-active">
-                <a href="index.html">Chavez Castillo k</a>
-              </li>
-              <li><a href="https://cckevin.neocities.org/">CCKevin</a></li>
-              <li>
-                <a href="https://garageatugusto.neocities.org/"
-                  >Garage a tu Gusto</a
-                >
-              </li>
-            </ul>
-          </nav>
+              <div class="column">
+                <a href="https://www.linkedin.com/in/kevin-chavez-castillo/">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </div>
+              <div class="column">
+                <a href="https://chavezcastilloka.wordpress.com/">
+                  <ion-icon name="logo-wordpress"></ion-icon>
+                </a>
+              </div>
+            </section>
+          </article>
+        </main>
+        <footer class="hero-foot level is-mobile">
+          <div class="level-left">
+            <p><small>Think freely.</small></p>
+          </div>
+          <div class="level right">
+            <figure class="image is-32x32 m-2">
+              <a href="index.html">
+                <img src="images/ck.png" />
+              </a>
+            </figure>
+          </div>
         </footer>
       </div>
     </div>
