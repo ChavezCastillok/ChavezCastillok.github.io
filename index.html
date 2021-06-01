@@ -25,22 +25,27 @@
 
   <body>
     <div class="container">
-      <div
-        class="
-          hero
-          is-fullheight is-justify-content-center is-align-items-center
-        "
-      >
-        <main class="hero-body is-flex-tablet">
-          <figure class="image is-128x128 m-2">
+      <div class="hero is-fullheight">
+        <nav class="hero-head is-flex is-justify-content-space-evenly">
+          <a href="https://radicalcs.netlify.app" target="_blank">
+            RadiCalcs
+          </a>
+          <a href="https://garageatugusto.netlify.app" target="_blank">
+            Garage a tu Gusto
+          </a>
+        </nav>
+        <main class="hero-body columns is-mobile">
+          <figure class="image column is-3-mobile is-5">
             <img src="images/ck-20.svg" alt="logo-cck" />
           </figure>
-          <article class="section has-text-centered-mobile">
-            <h1 class="title mt-2">
-              <a href="index.html">Chavez Castillo k</a>
-            </h1>
-            <h2 class="subtitle">Making magic with the client, stylish.</h2>
-            <section class="columns is-mobile">
+          <section class="column section">
+            <header class="has-text-centered-mobile">
+              <h1 class="title mt-2">
+                <a href="index.html">Chavez Castillo k</a>
+              </h1>
+              <h2 class="subtitle">Making magic with the client, stylish.</h2>
+            </header>
+            <article class="columns is-mobile">
               <div class="column">
                 <a href="https://github.com/ChavezCastillok">
                   <ion-icon name="logo-github"></ion-icon>
@@ -57,27 +62,19 @@
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
               </div>
-            </section>
-          </article>
+            </article>
+          </section>
         </main>
-        <section class="hero-foot mb-2">
-          <nav class="tabs is-toggle">
-            <ul>
-              <li>
-                <a href="https://radicalcs.netlify.app">
-                  RadiCalcs
-                  <ion-icon name="log-in-outline"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="https://garageatugusto.netlify.app">
-                  Garage a tu Gusto
-                  <ion-icon name="log-in-outline"></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </section>
+        <footer class="hero-foot is-flex is-justify-content-space-evenly pt-1">
+          <p>CV: here (.pdf)</p>
+          <address>San Cristobal, Venezuela.</address>
+          <p>
+            <script>
+              currentYear = new Date().getFullYear();
+              document.write("@" + currentYear);
+            </script>
+          </p>
+        </footer>
       </div>
     </div>
   </body>

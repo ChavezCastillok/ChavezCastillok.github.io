@@ -1,9 +1,8 @@
 html,
 body {
-  color: ghostwhite;
   font-family: "comfortaa", "liberation Mono", "Hack";
-  background-color: ghostwhite;
-  color: darkgreen;
+  background-color: rgba(97, 19, 97, 0.5);
+  color: lightpink;
 }
 
 ion-icon {
@@ -11,19 +10,26 @@ ion-icon {
   color: #8000805a;
 }
 
+a {
+  color: lightgreen;
+}
+a:hover {
+  color: lightpink;
+  font-weight: bold;
+}
+
 .title,
 .title a {
-  color: #8000805a;
+  color: lightgreen;
 }
 
-.subtitle,
-.content .subtitle {
+.subtitle {
   font-size: larger;
-  color: #0080005a;
+  color: lightpink;
 }
-
-.footer {
-  text-align: right;
+.hero-head,
+.hero-foot {
+  background-color: rgba(97, 19, 97, 0.5);
 }
 
 #imagen {
