@@ -1,45 +1,42 @@
 html,
 body {
-  font-family: "comfortaa", "liberation Mono", "Hack";
-  background: linear-gradient(
-    135deg,
-    rgba(144, 238, 144, 0.8) 10%,
-    rgba(97, 19, 97, 0.5) 60%
-  );
-  background-attachment: fixed;
-  color: lightpink;
+  font-family: "comfortaa";
+  background-color: lightsteelblue;
+  color: darkslateblue;
 }
 
 ion-icon {
-  font-size: 32px;
-  color: rgba(144, 238, 144);
+  font-size: 64px;
 }
 
 a {
-  color: lightgreen;
+  color: steelblue;
 }
 a:hover {
-  color: lightpink;
+  color: violet;
+  text-transform: uppercase;
   font-weight: bold;
+  background-color: black;
 }
 
 .title,
-.title a {
-  color: lightgreen;
+.subtitle {
+  color: darkslateblue;
+  font-family: "comfortaa Medium";
 }
 
-.subtitle {
-  font-size: larger;
-  color: lightpink;
+.image {
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
 .section .title {
-  color: rgba(97, 19, 97, 0.5);
-  text-shadow: -1px -1px lightpink;
+  color: darkslateblue;
+  text-shadow: -1px -1px ghostwhite;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .card ion-icon {
@@ -51,17 +48,6 @@ a:hover {
   font-size: 26px;
 }
 
-#imagen {
-  display: contents;
-  position: unset;
-}
-
-@media screen and (max-width: 768px) {
-  .hero-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
+.media-content .subtitle {
+  color: steelblue;
 }
