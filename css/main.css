@@ -1,22 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap");
+
 html,
 body {
   font-family: "comfortaa";
-  background-color: lightsteelblue;
   color: darkslateblue;
+  background-color: ghostwhite;
 }
 
-ion-icon {
-  font-size: 64px;
+span {
+  font-family: "Hack", "consolas", "monospace";
 }
 
-a {
-  color: steelblue;
-}
-a:hover {
-  color: violet;
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: black;
+.content h4 {
+  color: darkslateblue;
 }
 
 .title,
@@ -26,28 +22,11 @@ a:hover {
 }
 
 .image {
-  border: 1px solid white;
+  border: 1px solid ghostwhite;
   border-radius: 50%;
 }
 
-.section .title {
+.title {
   color: darkslateblue;
   text-shadow: -1px -1px ghostwhite;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.card ion-icon {
-  padding-top: 0.4rem;
-  font-size: 26px;
-}
-
-.card .icon.text {
-  font-size: 26px;
-}
-
-.media-content .subtitle {
-  color: steelblue;
 }

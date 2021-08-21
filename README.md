@@ -1,5 +1,21 @@
-# ChavezCastillok.github.io
+# [Github Page](https://chavezcastillok.github.io/)
 
-Mi pagina web de presentacion, enlace a mi perfil aquí en Github, Twitter, Linkedin y el CV generado en PDF.
+My personal website and reference to my social media profiles, my coding skills and my development environment.
 
-Simple.
+## coding skills
+
+- HTML, CSS
+- Javascript, Typescript, Svelte
+- Python
+- SQL
+
+## development environment
+
+- Fedora
+- VSCode
+- Firefox, Chromium
+
+## contact me on social media as @chavezcastillok
+
+- [Twitter](https://twitter.com/chavezcastillok)
+- [Linkedin](https://www.linkedin.com/in/kevin-chavez-castillo/)
