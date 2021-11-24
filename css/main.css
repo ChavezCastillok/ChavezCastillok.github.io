@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap");
+@font-face {
+  font-family: comfortaa;
+  src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: BadScript;
+  src: url(../fonts/BadScript-Regular.ttf);
+}
 
 html,
 body {
@@ -9,6 +16,7 @@ body {
 
 span {
   font-family: "Hack", "consolas", "monospace";
+  color: darkslateblue;
 }
 
 .content h4 {
@@ -18,15 +26,15 @@ span {
 .title,
 .subtitle {
   color: darkslateblue;
-  font-family: "comfortaa Medium";
+  font-family: "BadScript";
 }
 
 .image {
-  border: 1px solid ghostwhite;
+  border: 1px solid darkslateblue;
   border-radius: 50%;
 }
 
 .title {
   color: darkslateblue;
-  text-shadow: -1px -1px ghostwhite;
+  text-shadow: -1px -1px violet;
 }

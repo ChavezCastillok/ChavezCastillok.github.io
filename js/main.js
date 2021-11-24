@@ -93,5 +93,5 @@ function display_tags_list(node, list) {
 addEventListener("load", () => {
   display_tags_list(document.getElementById("lang_refs"), lang_references);
   display_tags_list(document.getElementById("devenv_refs"), devenvs_list);
-  console.log("Thanks for your visit.");
+  console.log("Thanks for your visit. Don't stop, nothing does.");
 });
