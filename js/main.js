@@ -1,3 +1,37 @@
+const sites_dev = [
+  {
+    name: "My first website",
+    description:
+      "Developed as part of a frontend web development course and periodically updated for internships.",
+    website: "https://cckevin.neocities.org/",
+  },
+  {
+    name: "Notask",
+    description: "Simple, make easily notes and task list. It's only local save in your device browser.",
+    website: "https://notask.netlify.app/",
+  },
+  {
+    name: "Radicalcs",
+    description: "Calc basic, and others",
+    website: "https://radicalcs.netlify.app/",
+  },
+  {
+    name: "Garage a tu gusto",
+    description: "Catalogo de productos...",
+    website: "https://garageatugusto.netlify.app/",
+  },
+  {
+    name: "Github Page",
+    description: "This site.",
+    website: "https://chavezcastillok.github.io/",
+  },
+  {
+    name: "and more!",
+    description: "coming soon. Visit my repositories on my github profile.",
+    website: "https://github.com/ChavezCastillok",
+  },
+];
+
 const lang_references = [
   {
     name: "HTML",
@@ -45,7 +79,7 @@ const lang_references = [
 
 const devenvs_list = [
   {
-    name: "Fedora",
+    name: "Fedora OS",
     ionicon: '<ion-icon name="logo-tux"></ion-icon>',
     link: "https://getfedora.org/",
     class: "is-info",
@@ -74,7 +108,7 @@ function display_tags_list(node, list) {
   node.innerHTML = "";
   list.forEach((tag) => {
     node.innerHTML += `
-    <div class="control">
+    <div class="control m-1">
       <a href="${tag.link}" target="_blank" class="tags has-addons">
         <span class="tag ${tag.class}">
         ${tag.name}
@@ -90,7 +124,30 @@ function display_tags_list(node, list) {
   });
 }
 
+function display_site_list(node, list) {
+  node.innerHTML = "";
+  list.forEach((tag) => {
+    node.innerHTML += `
+    <div class="column is-half-tablet is-one-third-desktop is-one-quarter-fullhd">
+    <div class="box content">
+      <h1>${tag.name}</h1>
+      <p>${tag.description}</p>
+      <p>Website: 
+        <a href="${tag.website}" target="_blank>
+          <span class="icon-text">
+            <span>${tag.name}</span>
+            <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
+          </span>
+        </a>
+      </p>
+    </div>
+    </div>
+    `;
+  });
+}
+
 addEventListener("load", () => {
+  display_site_list(document.getElementById("sites"), sites_dev);
   display_tags_list(document.getElementById("lang_refs"), lang_references);
   display_tags_list(document.getElementById("devenv_refs"), devenvs_list);
   console.log("Thanks for your visit. Don't stop, nothing does.");
