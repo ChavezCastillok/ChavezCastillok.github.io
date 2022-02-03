@@ -6,6 +6,10 @@
   font-family: BadScript;
   src: url(../fonts/BadScript-Regular.ttf);
 }
+@font-face {
+  font-family: Hack;
+  src: url(../fonts/Hack-Regular.ttf);
+}
 
 html,
 body {

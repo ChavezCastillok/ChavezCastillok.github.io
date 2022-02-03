@@ -1,34 +1,28 @@
 const sites_dev = [
   {
-    name: "My first website",
-    description:
-      "Developed as part of a frontend web development course and periodically updated for internships.",
-    website: "https://cckevin.neocities.org/",
+    name: "Get from Youtube",
+    ws: "https://github.com/ChavezCastillok/get-from-youtube",
+    src: "https://github.com/ChavezCastillok/get-from-youtube",
   },
   {
     name: "Notask",
-    description: "Simple, make easily notes and task list. It's only local save in your device browser.",
-    website: "https://notask.netlify.app/",
+    ws: "https://notask.netlify.app/",
+    src: "https://github.com/ChavezCastillok/Notask",
   },
   {
     name: "Radicalcs",
-    description: "Calc basic, and others",
-    website: "https://radicalcs.netlify.app/",
+    ws: "https://radicalcs.netlify.app/",
+    src: "https://github.com/ChavezCastillok/radicalcs",
   },
   {
     name: "Garage a tu gusto",
-    description: "Catalogo de productos...",
-    website: "https://garageatugusto.netlify.app/",
+    ws: "https://garageatugusto.netlify.app/",
+    src: "https://github.com/ChavezCastillok/garage-atu-gusto",
   },
   {
-    name: "Github Page",
-    description: "This site.",
-    website: "https://chavezcastillok.github.io/",
-  },
-  {
-    name: "and more!",
-    description: "coming soon. Visit my repositories on my github profile.",
-    website: "https://github.com/ChavezCastillok",
+    name: "cckevin",
+    ws: "https://cckevin.neocities.org/",
+    src: "https://cckevin.neocities.org/",
   },
 ];
 
@@ -129,18 +123,27 @@ function display_site_list(node, list) {
   list.forEach((tag) => {
     node.innerHTML += `
     <div class="column is-half-tablet is-one-third-desktop is-one-quarter-fullhd">
-    <div class="box content">
-      <h1>${tag.name}</h1>
-      <p>${tag.description}</p>
-      <p>Website: 
-        <a href="${tag.website}" target="_blank>
-          <span class="icon-text">
-            <span>${tag.name}</span>
-            <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
+      <div class="content box">
+        <p>
+        <a href="${tag.ws}" target="_blank">
+        <span class="icon.text">
+          <span class="icon">
+            <ion-icon name="link-outline"></ion-icon>
           </span>
-        </a>
-      </p>
-    </div>
+        <span><strong>${tag.name}</strong></span>
+        </a>   
+        </p>
+        <p>
+          <a href="${tag.src}" target="_blank">
+          <span class="icon-text">
+            <span class="icon">
+              <ion-icon name="logo-github"></ion-icon>
+            </span>
+            <span>src</span>
+          </span>
+          </a>
+        </p>
+      </div>
     </div>
     `;
   });
