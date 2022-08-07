@@ -24,6 +24,11 @@ const sites_dev = [
     ws: "https://cckevin.neocities.org/",
     src: "https://cckevin.neocities.org/",
   },
+  {
+    name: "and more!",
+    ws: "",
+    src: "#",
+  },
 ];
 
 const lang_references = [
@@ -98,6 +103,101 @@ const devenvs_list = [
   },
 ];
 
+const sites_card = [
+  {
+    username: "@notask",
+    picture: "https://notask.netlify.app/favicon.png",
+    title: "Notask",
+    subtitle: "Notes and task list",
+    description:
+      "This is a simple app for notes, tasks and or list to do. Make your first Notask and starting work. @notask.",
+    tags: ["#bulmacss", "#responsive", "#sveltejs"],
+    uri_src: "https://github.com/ChavezCastillok/Notask",
+    uri_web: "https://notask.netlify.app/",
+  },
+  {
+    username: "@garageatugusto",
+    picture: "https://garageatugusto.netlify.app/img/gatg.png",
+    title: "Garage a tu Gusto",
+    subtitle: "roductos nuevos y usados + Servicios",
+    description:
+      "Gatug es un Catalogo de productos y precios a la venta, mas una ventana publicitaria para otros servicios.",
+    tags: ["#bulmacss", "#sveltejs", "#typescript"],
+    uri_src: "https://github.com/ChavezCastillok/garage-atu-gusto",
+    uri_web: "https://garageatugusto.netlify.app/",
+  },
+];
+
+function display_tags(list) {
+  let string = "";
+  list.forEach((item) => {
+    string += `<a class='tag is-info is-light' href="#">${item} </a>`;
+  });
+  return string;
+}
+
+function display_card_list(node, list) {
+  node.innerHTML = "";
+  list.forEach((tag) => {
+    node.innerHTML += `
+    <div class="column card p-3 m-2">
+          <div class="card-header">
+            <p class="card-header-title">
+              <a href="https://notask.netlify.app/" target="_blank">${
+                tag.username
+              }</a>
+            </p>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img
+                    src="${tag.picture}"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">${tag.title}</p>
+                <p class="subtitle is-6">${tag.subtitle}</p>
+              </div>
+            </div>
+
+            <div class="content">
+            ${tag.description}
+            ${display_tags(tag.tags)}
+            </div>
+          </div>
+          <div class="card-footer">
+            <p class="card-footer-item">
+              <a
+                class="mt-3 pr-3"
+                href="${tag.uri_src}"
+                target="_blank"
+              >
+                <span class="icon">
+                  <ion-icon name="logo-github" size="large"></ion-icon>
+                </span>
+              </a>
+            </p>
+            <p class="card-footer-item">
+              <a
+                class="mt-3 pr-3"
+                href="${tag.uri_web}"
+                target="_blank"
+              >
+                <span class="icon">
+                  <ion-icon name="log-out-outline" size="large"></ion-icon>
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+    `;
+  });
+}
+
 function display_tags_list(node, list) {
   node.innerHTML = "";
   list.forEach((tag) => {
@@ -150,8 +250,18 @@ function display_site_list(node, list) {
 }
 
 addEventListener("load", () => {
+  display_card_list(document.getElementById("cards"), sites_card);
   display_site_list(document.getElementById("sites"), sites_dev);
   display_tags_list(document.getElementById("lang_refs"), lang_references);
   display_tags_list(document.getElementById("devenv_refs"), devenvs_list);
   console.log("Thanks for your visit. Don't stop, nothing does.");
+
+  let now = new Date();
+  let date = document.getElementById("date");
+
+  date.innerText = now.toDateString();
+  date.setAttribute(
+    "datetime",
+    `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`
+  );
 });
