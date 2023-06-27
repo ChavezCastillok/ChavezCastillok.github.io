@@ -1,3 +1,27 @@
+let socialMediaIcons = [
+  {
+    name: "logo-github",
+    uri: "https://github.com/ChavezCastillok",
+    username: "ChavezCastillok",
+  },
+
+  {
+    name: "logo-linkedin",
+    uri: "https://www.linkedin.com/in/kevin-chavez-castillo/",
+    username: "kevin-chavez-castillo",
+  },
+  {
+    name: "logo-instagram",
+    uri: "https://instagram.com/ChavezCastilloka",
+    username: "ChavezCastilloka",
+  },
+  {
+    name: "logo-twitter",
+    uri: "https://twitter.com/chavezcastillok",
+    username: "chavezcastillok",
+  },
+];
+
 const sites_dev = [
   {
     name: "Get from Youtube",
@@ -136,6 +160,19 @@ function display_tags(list) {
   return string;
 }
 
+function display_socialmedia_icons(node, list) {
+  node.innerHTML = "";
+  list.forEach((red) => {
+    node.innerHTML += `
+    <li>
+                <a href="${red.uri}" target="_blank">
+                  <ion-icon name="${red.name}" />
+                </a>
+              </li>
+    `;
+  });
+}
+
 function display_card_list(node, list) {
   node.innerHTML = "";
   list.forEach((tag) => {
@@ -250,18 +287,23 @@ function display_site_list(node, list) {
 }
 
 addEventListener("load", () => {
-  display_card_list(document.getElementById("cards"), sites_card);
-  display_site_list(document.getElementById("sites"), sites_dev);
-  display_tags_list(document.getElementById("lang_refs"), lang_references);
-  display_tags_list(document.getElementById("devenv_refs"), devenvs_list);
+  // display_card_list(document.getElementById("cards"), sites_card);
+  // display_site_list(document.getElementById("sites"), sites_dev);
+  // display_tags_list(document.getElementById("lang_refs"), lang_references);
+  // display_tags_list(document.getElementById("devenv_refs"), devenvs_list);
+
+  display_socialmedia_icons(
+    document.getElementById("socialIcons"),
+    socialMediaIcons
+  );
   console.log("Thanks for your visit. Don't stop, nothing does.");
 
-  let now = new Date();
-  let date = document.getElementById("date");
+  //   let now = new Date();
+  //   let date = document.getElementById("date");
 
-  date.innerText = now.toDateString();
-  date.setAttribute(
-    "datetime",
-    `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`
-  );
+  //   date.innerText = now.toDateString();
+  //   date.setAttribute(
+  //     "datetime",
+  //     `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`
+  //   );
 });
