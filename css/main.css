@@ -1,3 +1,7 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 @font-face {
   font-family: comfortaa;
   src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
@@ -23,6 +27,13 @@ span {
   color: darkslateblue;
 }
 
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .content h4 {
   color: darkslateblue;
 }
@@ -30,7 +41,6 @@ span {
 .title,
 .subtitle {
   color: darkslateblue;
-  font-family: "BadScript";
 }
 
 .image {

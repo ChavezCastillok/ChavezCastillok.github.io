@@ -15,11 +15,6 @@ let socialMediaIcons = [
     uri: "https://instagram.com/ChavezCastilloka",
     username: "ChavezCastilloka",
   },
-  {
-    name: "logo-twitter",
-    uri: "https://twitter.com/chavezcastillok",
-    username: "chavezcastillok",
-  },
 ];
 
 const sites_dev = [
